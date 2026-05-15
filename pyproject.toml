@@ -1,0 +1,32 @@
+[project]
+name = "practica2-modelado"
+version = "0.1.0"
+description = "Practica 2 - Repo 1: modelado, calibracion e incertidumbre para deteccion de impago"
+requires-python = ">=3.10"
+dependencies = [
+    # --- Base cientifica (heredado de Practica 1) ---
+    "numpy>=1.26",
+    "pandas>=2.0",
+    "scikit-learn>=1.4",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "joblib>=1.3",
+    "openpyxl>=3.1",          # para leer variables_withExperts.xlsx
+    # --- Preprocesado de Practica 1 (necesario para cargar los .pkl) ---
+    "skrub>=0.2",             # TextEncoder usado en base_preprocessing.py
+    "feature-engine>=1.6",    # DropConstantFeatures, etc. en base_filtering.py
+    # --- Modelos ---
+    "lightgbm>=4.0",
+    "xgboost>=2.0",
+    # --- Optimizacion de hiperparametros (Seccion 1) ---
+    "optuna>=3.5",
+    "optuna-integration>=3.5",  # LightGBMPruningCallback, XGBoostPruningCallback
+    # --- Incertidumbre (Seccion 3) ---
+    "venn-abers>=1.4",        # intervalo [p_low, p_high]
+    # --- Notebook ---
+    "jupyter>=1.0",
+    "ipykernel>=6.29",
+]
+
+[tool.uv]
+# uv gestiona el entorno. Ver README para los comandos.

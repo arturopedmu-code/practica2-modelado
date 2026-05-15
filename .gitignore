@@ -1,0 +1,21 @@
+# Datos y artefactos pesados (no versionar)
+*.csv
+*.xlsx
+preprocessor.pkl
+filter.pkl
+data/
+
+# El modelo final SI se entrega (ver enunciado), pero el schema tambien.
+# Si pesa demasiado para git, subirlo con git-lfs o adjuntarlo aparte.
+# artifacts/practica2_model.pkl
+# artifacts/feature_schema.json
+
+# Entorno
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+uv.lock
+
+# Cache de modelos de HuggingFace (skrub TextEncoder)
+.cache/
